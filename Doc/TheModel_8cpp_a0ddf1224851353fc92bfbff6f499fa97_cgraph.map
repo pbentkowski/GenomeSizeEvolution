@@ -1,0 +1,35 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classrngEngine.html#aee64f40e07926185f95052cdc7bf18e3" title="Core method. Gets instance of the RNG." alt="" coords="524,904,687,934"/>
+<area shape="rect" id="node7" href="$classrngEngine.html#a21840f29a1ea114ddd251553e339f168" title="Seeding the Marsenne Twister random number generator." alt="" coords="1095,480,1244,510"/>
+<area shape="rect" id="node9" href="$classTagging__system.html#a80d575a3bbb747f9e1ff71877a937cba" title="Data collecting method. Gets instance of tagging system." alt="" coords="504,480,707,510"/>
+<area shape="rect" id="node13" href="$classTagging__system.html#ae2d0666e104e9579931dc61e13fa4888" title="Data collecting method. Sets a new value for tagging system." alt="" coords="161,372,345,402"/>
+<area shape="rect" id="node15" href="$classEcosystem.html#a9c459456082bdcebebeaba67b276cfd0" title="Core method. Sets a new population in given Env conditions and of given size." alt="" coords="164,425,343,456"/>
+<area shape="rect" id="node17" href="$classEcosystem.html#aa26876007e770024928bd8c2748d2222" title="Data collecting method. Saving general system&#39;s properties to the file." alt="" coords="132,266,375,297"/>
+<area shape="rect" id="node35" href="$classEcosystem.html#a29523e18d64fa67c8aebb9a99aff5957" title="Data collecting method. Writes to file a histogram of sizes of genotypes in given time step..." alt="" coords="155,532,352,562"/>
+<area shape="rect" id="node37" href="$classEcosystem.html#a611ff2fecef4a34dcb73657ad572dbf8" title="Data collecting method. Returns a histogram of ages of cells." alt="" coords="168,585,339,616"/>
+<area shape="rect" id="node39" href="$classEcosystem.html#a5853f9762c4c91d40dfb05c959abd097" title="Data collecting method. Returns a histogram of fractions of total environmental space taken by genoty..." alt="" coords="113,638,393,669"/>
+<area shape="rect" id="node41" href="$classEcosystem.html#a8ab8b96cd612eebec075a5a98feeec29" title="Data collecting method. Returns a histogram of maximums of genotypes envelopes." alt="" coords="107,692,400,722"/>
+<area shape="rect" id="node43" href="$classEcosystem.html#ab658ff43ae86399189569f9b00222c65" title="Data collecting method. Returns a histogram of resources allocated in the cells." alt="" coords="116,745,391,776"/>
+<area shape="rect" id="node45" href="$classEcosystem.html#acd7c553337ea8a38ecb4a1572cf68b52" title="Data collecting method. Returns a histogram of resources allocated in the cells." alt="" coords="117,798,389,829"/>
+<area shape="rect" id="node47" href="$classEcosystem.html#a882e846f4004e31b88e801514c932484" title="Data collecting method. Splits into a histograms a series of data of all the cells which reproduced..." alt="" coords="109,852,397,882"/>
+<area shape="rect" id="node49" href="$classrngEngine.html#a7a954bb07d2a3e8f20b04f14d5f1a59b" title="Generates a random double precision number." alt="" coords="508,957,703,988"/>
+<area shape="rect" id="node54" href="$classEcosystem.html#a144a0594e881ad7b36b64faccf1d9b4c" title="Core method. Feeds cells. Has two modes of feeding: (p) proportionally to cell&#39;s demand for resource ..." alt="" coords="176,956,331,986"/>
+<area shape="rect" id="node58" href="$classEcosystem.html#ae1f5162ddcbbec9933d5e2c5c62678fe" title="Core method. Reproduces or/and kills cells." alt="" coords="145,1009,361,1040"/>
+<area shape="rect" id="node62" href="$classEcosystem.html#a4dccae9a322022d09724501419df349f" title="Core method. Does the horizontal gene transfer." alt="" coords="133,478,373,509"/>
+<area shape="rect" id="node69" href="$classEcosystem.html#a4227871d6d47201edf4450fd35882c53" title="Data collecting method. Clears all three record of all the cells regarding the number of mutations..." alt="" coords="136,1113,371,1144"/>
+<area shape="rect" id="node71" href="$classEcosystem.html#aeea43b7824caa0001a8fe248c3392017" title="Data collecting method. Calculating the speed of evolution." alt="" coords="119,1166,388,1197"/>
+<area shape="rect" id="node73" href="$classrngEngine.html#a6400883e0f846d86fb5c0540e5fdfd51" title="Core method. Releases instance of the RNG." alt="" coords="184,1220,323,1250"/>
+<area shape="rect" id="node75" href="$classTagging__system.html#aed15dfd8ae2394a3a46e2eba17ea8c6b" title="Data collecting method. Releases instance of tagging system." alt="" coords="164,1273,343,1304"/>
+<area shape="rect" id="node5" href="$classrngEngine.html#aba770bb62302fb289d272c996163135f" title="Core method. Constructor of the RNG." alt="" coords="851,904,1005,934"/>
+<area shape="rect" id="node11" href="$classTagging__system.html#a2d9f2ccd8121a0309e35151b5f9ea4da" title="Data collecting method. Constructor." alt="" coords="811,480,1045,510"/>
+<area shape="rect" id="node19" href="$classEcosystem.html#ae4373e033efacb2fc1d8be6b5521880c" title="Data collecting method. Returns the mean number of genes in genotypes of all the cells." alt="" coords="448,426,763,457"/>
+<area shape="rect" id="node21" href="$classEcosystem.html#a30fc9729432ba63f068f19effa42d8dd" title="Data collecting method. Returns the standard deviation of the number of genes in genotypes of all the..." alt="" coords="480,53,731,84"/>
+<area shape="rect" id="node23" href="$classEcosystem.html#a5817a0df8a9753d2fb21fe2a465b1364" title="Data collecting method. Returns returns the sum of all resources allocated in all the cells..." alt="" coords="465,106,745,137"/>
+<area shape="rect" id="node25" href="$classEcosystem.html#a6e753a4d44bae33695219d15a8324930" title="Data collecting method. Returns the mean age of all cells in ecosystem." alt="" coords="488,160,723,190"/>
+<area shape="rect" id="node27" href="$classEcosystem.html#a59bedd0e20191831596d1f5a8f8f6ad2" title="Data collecting method. Returns the standard deviation of the age of cells." alt="" coords="492,213,719,244"/>
+<area shape="rect" id="node29" href="$classEcosystem.html#a29837c080dcab24bb549b54f726b7836" title="Data collecting method. Returns the Shannon Index for genes in the population. Each gene..." alt="" coords="473,266,737,297"/>
+<area shape="rect" id="node31" href="$classEcosystem.html#a82222fece3a09085304948f8c338729f" title="Data collecting method. Returns the mean size of the surface of the environment taken by genotypes en..." alt="" coords="459,320,752,350"/>
+<area shape="rect" id="node33" href="$classEcosystem.html#a3af5683a5e2d7c0ff3e8a726f2c5eb32" title="Data collecting method. Returns the standard deviation of the surface of the environment covered by g..." alt="" coords="463,373,748,404"/>
+<area shape="rect" id="node51" href="$classrngEngine.html#a1b269e4352e5eae019647eadd4088bac" title="Marsenne Twister random number generator&#39;s guts." alt="" coords="853,957,1003,988"/>
+<area shape="rect" id="node67" href="$classTagging__system.html#af57001cb7fe7d78d05076231552d1911" title="Data collecting method. Obtaining an unique tag." alt="" coords="517,533,693,564"/>
+</map>

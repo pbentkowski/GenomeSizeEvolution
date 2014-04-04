@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classrngEngine.html#aee64f40e07926185f95052cdc7bf18e3" title="Core method. Gets instance of the RNG." alt="" coords="209,293,372,323"/>
+<area shape="rect" id="node5" href="$classCell.html#a3b8c338f6fd2f7bd583319673d21a93e" title="Core method. Sets a brand new cell with initial (random) values." alt="" coords="713,241,873,271"/>
+<area shape="rect" id="node7" href="$classCell.html#a2ced842da88790f6e1a53a2cc2660cb9" title="Core method. Does mutations do cell&#39;s genotype." alt="" coords="735,506,852,537"/>
+<area shape="rect" id="node9" href="$classEcosystem.html#a144a0594e881ad7b36b64faccf1d9b4c" title="Core method. Feeds cells. Has two modes of feeding: (p) proportionally to cell&#39;s demand for resource ..." alt="" coords="465,5,620,35"/>
+<area shape="rect" id="node11" href="$TheModel_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function." alt="" coords="768,83,819,114"/>
+<area shape="rect" id="node13" href="$classEcosystem.html#ae1f5162ddcbbec9933d5e2c5c62678fe" title="Core method. Reproduces or/and kills cells." alt="" coords="435,109,651,139"/>
+<area shape="rect" id="node16" href="$classEcosystem.html#a4dccae9a322022d09724501419df349f" title="Core method. Does the horizontal gene transfer." alt="" coords="423,162,663,193"/>
+<area shape="rect" id="node19" href="$classGene.html#aa5eb74c129d02161fca1b2161de9b917" title="Core method. Sets values of a gene." alt="" coords="463,319,623,350"/>
+<area shape="rect" id="node21" href="$classGene.html#a1c6b31112d63b356608b2902e63c1a27" title="Core method. Sets new values of genes if tossed below mutation threshold." alt="" coords="489,373,596,403"/>
+<area shape="rect" id="node23" href="$classGenotype.html#a689cd2ea82d8994b0b08c5acfaa9ac60" title="Core method. Sets up a brand new genotype. And assigns random number of genes and values of the genes..." alt="" coords="457,266,628,297"/>
+<area shape="rect" id="node26" href="$classGenotype.html#a3fda8108f554c6447cb19252a66c8900" title="When called deletes some genes (at least one)." alt="" coords="457,479,628,510"/>
+<area shape="rect" id="node29" href="$classGenotype.html#ad0ef2afdc4e6dc71929707adef6fc075" title="When called duplicates some genes (at least one duplicate )." alt="" coords="452,533,633,563"/>
+<area shape="rect" id="node32" href="$classGenotype.html#a5d7e0cdefa59ab919c8c24688124a848" title="Core method. When called mutates some genes (at least one)." alt="" coords="456,426,629,457"/>
+</map>

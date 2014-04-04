@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classEcosystem.html#ae4373e033efacb2fc1d8be6b5521880c" title="Data collecting method. Returns the mean number of genes in genotypes of all the cells." alt="" coords="296,5,611,35"/>
+<area shape="rect" id="node5" href="$classEcosystem.html#a30fc9729432ba63f068f19effa42d8dd" title="Data collecting method. Returns the standard deviation of the number of genes in genotypes of all the..." alt="" coords="328,58,579,89"/>
+<area shape="rect" id="node7" href="$classEcosystem.html#a5817a0df8a9753d2fb21fe2a465b1364" title="Data collecting method. Returns returns the sum of all resources allocated in all the cells..." alt="" coords="313,111,593,142"/>
+<area shape="rect" id="node9" href="$classEcosystem.html#a6e753a4d44bae33695219d15a8324930" title="Data collecting method. Returns the mean age of all cells in ecosystem." alt="" coords="336,165,571,195"/>
+<area shape="rect" id="node11" href="$classEcosystem.html#a59bedd0e20191831596d1f5a8f8f6ad2" title="Data collecting method. Returns the standard deviation of the age of cells." alt="" coords="340,218,567,249"/>
+<area shape="rect" id="node13" href="$classEcosystem.html#a29837c080dcab24bb549b54f726b7836" title="Data collecting method. Returns the Shannon Index for genes in the population. Each gene..." alt="" coords="321,271,585,302"/>
+<area shape="rect" id="node15" href="$classEcosystem.html#a82222fece3a09085304948f8c338729f" title="Data collecting method. Returns the mean size of the surface of the environment taken by genotypes en..." alt="" coords="307,325,600,355"/>
+<area shape="rect" id="node17" href="$classEcosystem.html#a3af5683a5e2d7c0ff3e8a726f2c5eb32" title="Data collecting method. Returns the standard deviation of the surface of the environment covered by g..." alt="" coords="311,378,596,409"/>
+</map>

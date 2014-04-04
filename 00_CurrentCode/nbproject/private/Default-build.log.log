@@ -1,0 +1,8 @@
+g++ -Wall -O2 -L/usr/local/lib -c -o cell.o cell.cpp
+g++ -Wall -O2 -L/usr/local/lib -c -o ecosystem.o ecosystem.cpp
+g++ -Wall -O2 -L/usr/local/lib -c -o gene.o gene.cpp
+g++ -Wall -O2 -L/usr/local/lib -c -o genotype.o genotype.cpp
+g++ -Wall -O2 -L/usr/local/lib -c -o rngEngine.o rngEngine.cpp
+g++ -Wall -O2 -L/usr/local/lib -c -o tagging_system.o tagging_system.cpp
+g++ -Wall -O2 -L/usr/local/lib -c -o TheModel.o TheModel.cpp
+g++ -o Model_with_HGT cell.o ecosystem.o gene.o genotype.o rngEngine.o tagging_system.o TheModel.o -lgsl -lgslcblas -lm 

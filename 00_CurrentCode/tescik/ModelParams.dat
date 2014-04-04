@@ -1,0 +1,54 @@
+# This file stores informations about model's run parameters 
+# This model run aims in checking is how turbulence impact Shannon index.
+#enironment was given with a function: env(t+1) = env(t) + (turbulence*rand(0,1) - turbulence/2)
+
+# general: 
+    turbulence = 0.5
+    environment_resolution = 0.01
+    rng_seed = 84306
+    number of iterations = 5000
+# for gene class: 
+    not_super_gene_param = 0.08
+    mutate_threshold = 0.002
+    gene_space_width = 1
+# for genotype class: 
+    deletion_probability = 0.002
+    duplication_probability = 0.002
+    max_genotype_initialised = 60
+    min_genotype_initialised = 40
+    minimum_genotype_size = 1
+# for cell class: 
+    core_genes = 0
+    gene_replication_cost = 0.005
+    gain_from_the_genotype_ratio = 30
+    metabolic_costs = 1
+    minimal_cells_resource = 300
+    reproduction_resourse_size = 640
+    maximal_resourse_bonus_at_start = 50
+# for ecosystem class: 
+    random_death_rate = 0.005
+    total_resource_pool = 500000
+# data collecting const : 
+    envelope_of_genotype_hist_size = 50
+    envelope_of_genotype_hist_range = 0.02
+    maximum_of_genotype_hist_size = 50
+    maximum_of_genotype_hist_range = 0.04
+    AgeHistSize = 150
+    resource_alloc_hist_size = 60
+    resource_alloc_hist_range = 10
+    resource_alloc_hist_start = 200
+    resource_uptake_hist_size = 40
+    resource_uptake_hist_range = 1
+# Mode of feeding (p - proportional, s - sequential)
+    mode_of_feeding = s
+    disparity_at_reproduction = 0.05
+    AFR_hist_size = 151
+    AFR_hist_range = 10
+    Reproduce_hist_size = 20
+    Reproduce_hist_range = 1
+    at_repr_intake_hist_size = 71
+    at_repr_intake_bin_range = 0.5
+    genome_size_histogram_size = 60
+# horizontal gene transfer params: 
+    hgt_donor_prob = 0
+    hgt_gene_trans = 0

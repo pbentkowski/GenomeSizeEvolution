@@ -8,6 +8,13 @@ For writing this project I have used:
 In direcotry 00_CurrentCode one can find nbproject directory. If you running 
 NetBeans as well, you can load a NetBeans project from there.
 
-Direcotry Doc containes documentation in HTML format. Find file index.htm and
-run in a browser to view the docs. Do not alter files in Doc manually, they 
+Direcotry Doc containes documentation in HTML format. Find file 'index.htm' and
+run it in a browser to view the docs. Do not alter files in Doc manually, as they 
 are generated automatically by Doxygen.
+
+Directory 01_PyScrips contains Python scripts used for plotting and analysys
+of the output files. They are rather poorly documented - sorry :-(
+SigleRuns - scripts for processing single simulation.
+MultiRuns - scripts for processing and comparing a larger number of simulations, 
+often varying in parameter setup between each other.
+GenotypeAnalysys - scrips for counting mutations and evolution raleted stuff.

@@ -2,7 +2,12 @@ Welcome to Genome Size Evolution project!
 ----------------------------------------
 For writing this project I have used:
   - NetBeans for coding, https://netbeans.org/index.htm
-  - Doxygen and Doxywizard for generating documentation, http://www.stack.nl/~dimitri/doxygen/
-In direcotry 00_CurrentCode one can find nbproject directory. If you running NetBeans as well, you can load a NetBeans project from there.
+  - Doxygen and Doxywizard for generating documentation:
+    http://www.stack.nl/~dimitri/doxygen/
 
-Direcotry Doc containes documentation in HTML format. Find file index.htm and run in a browser to view the docs.
+In direcotry 00_CurrentCode one can find nbproject directory. If you running 
+NetBeans as well, you can load a NetBeans project from there.
+
+Direcotry Doc containes documentation in HTML format. Find file index.htm and
+run in a browser to view the docs. Do not alter files in Doc manually, they 
+are generated automatically by Doxygen.

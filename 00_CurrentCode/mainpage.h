@@ -1,26 +1,45 @@
 /** 
  * @mainpage "Modelling Genome Size Constrains"
  * 
- * @author Piotr Bentkowski : <a href="mailto:bentkowski.piotr@gmail.com
- * ?subject=Genome Streamlining Model v1.0">bentkowski.piotr@gmail.com</a> \n
+ * @author <b>Piotr Bentkowski</b>: \n <a href="mailto:bentkowski.piotr@gmail.com
+ * ?subject=Genome Streamlining Model">bentkowski.piotr@gmail.com</a> \n
  * \n
+ * Developed during Piotr's studies at:\n
  * Laboratory for Global Marine and Atmospheric Chemistry \n
  * School of Environmental Sciences \n
  * University of East Anglia \n
  * NR4 7TJ, Norwich \n
  * United Kingdom \n
- * 
+ * \n
+ * Under supervision of Dr. Thomas Mock \n
+ * With help from: Dr. Cock van Oosterhout, Dr. Hywel Williams, Prof. Tim Lenton \n
  * @version 1.1
  * 
  * @section intro Introduction
- * This program is an implementation of the evolution of genome size  model described
- * in Piotr Bentkowski's Ph.D. thesis. 
+ * This program is an implementation of a model of the evolution of genome size described
+ * in Piotr Bentkowski's Ph.D. thesis:\n
+ * <a href="https://ueaeprints.uea.ac.uk/50553/">Modelling evolution of genome size in prokaryotes 
+ * in response to changes in their abiotic environment</a> (2014) defended at the University of East Anglia. \n
+ * 
+ * @section Licence
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version. \n
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details. \n
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
  * 
  * @section Compilation
  * The program has some dependencies on
  * <a href="http://www.gnu.org/software/gsl/"> GNU Scientific Library</a>. Should compile
  * smoothly on most GNU/Linux distros with GSL installed.
- *  Compilation works fine on Ubuntu 12.04 LTS with a command: \n 
+ *  Compilation works fine on Ubuntu 12.04 LTS and 14:04 LTS with a command: \n 
  * \n 
  *<b>
  * g++ -O2 -o TheModel -L/usr/local/lib TheModel.cpp genotype.cpp gene.cpp
@@ -31,7 +50,7 @@
  * 
  * 
  * @section Parameters
- * <b>Program takes exactly 43 parameters. These are:</b> \n
+ * <b>Program takes exactly 45 parameters. These are:</b> \n
  * <b> 00 </b>- program's name \n
  * <b> 01 </b>- the turbulence level (the length of the step in the random walk; 
  * between 0 and 1) \n
@@ -107,14 +126,15 @@
  * <b> 41 </b>- the bin width of the histogram of the average intake per unit of
  * time until reproduction \n 
  * <b> 42 </b>- probability that a cell will become a gene donor in HGT \n
- * <b> 43 </b>- probability that a gene will get transfered from the donor's
+ * <b> 43 </b>- probability that a gene will get transferred from the donor's
  * genotype to recipient's genotype \n
+ * <b> 44 </b>- time interval (steps) in which statistics are saved to data files\n
  * \n
- * This program can recognise simple errors in the argument list (a value out of
+ * This program can recognise simple errors in the argument list (e.g. value out of
  * range, negative values when positive are needed etc.), but will not recognise
  * when they don't make a 'biological' sense.
  * 
- * @section The Output and data visualisation
+ * @section The Output
  * Program produces a number of text files containing desired data. The file
  * <i>ModelParams.dat</i> contains the values of parameters fed to the model. The
  * file <i>GenomeSizeData.dat</i> contains the main statistics of the model,
@@ -124,11 +144,11 @@
  * lines in the main function (<i>TheModel.cpp</i> file) what should speed up
  * the program runtime.
  * \n\n
-  *  All the files are:\n
+  *  Important files:\n
  * <b><i>ModelParams.dat</i></b> - contains run's parametrisation \n 
- * <b><i>GeneralData.dat</i></b> - contain basic statistics of the output \n
+ * <b><i>GeneralData.dat</i></b> - contains basic statistics of the output \n
  * \n
- * Each line of these files represents one time step: \n
+ * Each line of these files represents one time step (in sync with <i>GeneralData.dat</i>): \n
  * <b><i>GenomeSizeData.dat</i></b> - number of genes in genomes; histograms \n
  * <b><i>GeneNumberOfRepr.dat</i></b> - number of genes in genomes but only of cells which reproduced; histograms \n
  * <b><i>CellsAgeData.dat</i></b> - age of the cells in population; histograms \n
@@ -140,14 +160,23 @@
  * <b><i>RecourceInCells.dat</i></b> - resources allocated into cells in one time step; histograms \n
  * <b><i>NumberOfReproductions.dat</i></b> - how many times a cell reproduced; histograms \n
  * <b><i>RecourceUptakenCells.dat</i></b> - resources taken by cells in one time step; histograms \n
+ * <b><i>AvaregeGenotype.dat</i></b> - U(x) values (intake values) in all the cells in the population; histograms \n
+ * <b><i>AvarIntakeAtRepr.dat</i></b> - cells' average intake before reproduction; histograms \n
+ * <b><i>FrameMaxData.dat</i></b> - maximums of the genotypes' frame; histograms \n
+ * <b><i>GeneNumberOfRepr.dat</i></b> - cells' gene number distribution, only cells which reproduced; histograms \n
+ * <b><i>GenotypeEnvelMean.dat</i></b> - mean values of U(x) function (the genome's envelope) \n
+ * <b><i>GenotypeEnvelSTD.dat</i></b> - SD of U(x) function (the genome's envelope) \n
+ * 
  * \n 
  * Other data files: \n
  * <b><i>MutationRecords.dat</i></b> - cumulative number of mutations accumulated by each living cell 
  * in a defined time period. There is a dedicated function Ecosystem::clearMutationCounters(int current_iteration) 
  * for zeroing number of mutation  \n
+ * <b><i>GenomesOfPopulation.dat</i></b> - these are all the genomes in the ecosystem \n
  * 
+ * @section Visualisation
  * Visualisation is done using Python scripts containing calls to Pylab library
  * (Linux distros will have it in its repos, for Windows you might check 
- * the <a href="http://www.pythonxy.com/">Python(x,y) project</a>). These scripts
+ * the <a href="http://code.google.com/p/pythonxy/">Python(x,y) project</a>). These scripts
  * can be found in <i>01_PyScripts</i> directory.
  */

@@ -1,5 +1,14 @@
 Welcome to Genome Size Evolution project!
 ----------------------------------------
+This is an implementation of a model presented in the paper:
+
+Bentkowski P, Oosterhout CV, Mock T (2015) A model of genome size 
+evolution for prokaryotes in stable and fluctuating environments. 
+Genome Biol Evol evv148. doi: 10.1093/gbe/evv148
+ 
+You can get it from here (it's Open Access):
+http://gbe.oxfordjournals.org/content/early/2015/08/03/gbe.evv148
+----------------------------------------
 For writing this project I have used:
   - NetBeans for coding, https://netbeans.org/
   - Doxygen and Doxywizard for generating documentation:

@@ -1,5 +1,5 @@
 Welcome to Genome Size Evolution project!
-----------------------------------------
+-----------------------------------------
 
 This is an implementation of a model presented in the paper:
 
@@ -18,16 +18,16 @@ For writing this project I have used:
 To compile one needs GNU Scientific Library, http://www.gnu.org/software/gsl/ ,
 installed. It's in any GNU/Linux repos.
 
-In the directory 00_CurrentCode one can find nbproject directory. If you running 
+In the directory '00_CurrentCode' one can find nbproject directory. If you running 
 NetBeans as well, you can load a NetBeans project from there.
 
-Directory Doc contains documentation in HTML format. Find file 'index.htm' and
+Directory 'Doc' contains documentation in HTML format. Find file 'index.htm' and
 run it in a browser to view the docs. Do not alter files in Doc manually, as they 
 are generated automatically by Doxygen. File 'Doxyfile' contains the set-up for 
 Doxygen (you mignt need to tweek some dir paths at your local workstation -
 Doxywizard is a GUI front-end to Doxygen one might find useful).
 
-Directory 01_PyScrips contains Python scripts used for plotting and analysis
+Directory '01_PyScrips' contains Python scripts used for plotting and analysis
 of the output files. They are rather poorly documented - sorry :-(
 SigleRuns - scripts for processing single simulation.
 MultiRuns - scripts for processing and comparing a larger number of simulations, 

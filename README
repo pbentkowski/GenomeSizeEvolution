@@ -33,3 +33,7 @@ SigleRuns - scripts for processing single simulation.
 MultiRuns - scripts for processing and comparing a larger number of simulations, 
 often varying in parameter set-up between each other.
 GenotypeAnalysys - scripts for counting mutations and evolution related stuff.
+
+All simulations were carried out on the High Performance Computing Cluster supported
+by the Research and Specialist Computing Support service at the University of East Anglia. 
+http://rscs.uea.ac.uk/high-performance-computing

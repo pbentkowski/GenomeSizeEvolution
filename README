@@ -7,14 +7,14 @@ Bentkowski P, Oosterhout CV, Mock T (2015) A model of genome size
 evolution for prokaryotes in stable and fluctuating environments. 
 Genome Biol Evol evv148. doi: 10.1093/gbe/evv148
 
-with later alterations. For the ORIGINAL code from the pulication check 
-this branch: 
-
-   As_in_Bentkowski_et_al_2015_GBE
- 
 You can get it from here (it's Open Access):
 http://gbe.oxfordjournals.org/content/early/2015/08/03/gbe.evv148
 
+The "Master" branch includes the newest stable development. For the 
+ORIGINAL code from the publication check this branch:
+
+   As_in_Bentkowski_et_al_2015_GBE
+ 
 For writing this project I have used:
   - NetBeans for coding, https://netbeans.org/
   - Doxygen and Doxywizard for generating documentation:

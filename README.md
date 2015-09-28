@@ -22,6 +22,7 @@ ORIGINAL code from the publication check this branch:
 -------------------
 
 For writing this project I have used:
+
 * NetBeans for coding, https://netbeans.org/
 * Doxygen and Doxywizard for generating documentation:
       http://www.stack.nl/~dimitri/doxygen/
@@ -50,6 +51,7 @@ Auxiliary code:
 
 Directory '01_PyScrips' contains Python scripts used for plotting and analysis
 of the output files. They are rather poorly documented - sorry :-(
+  
 * SigleRuns - scripts for processing single simulation.
 * MultiRuns - scripts for processing and comparing a larger number of simulations,
 often varying in parameter set-up between each other.

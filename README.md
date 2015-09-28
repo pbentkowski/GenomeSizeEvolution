@@ -16,15 +16,15 @@ You can get it from here (it's Open Access):
 The "Master" branch includes the newest stable development. For the
 ORIGINAL code from the publication check this branch:
 
-   As_in_Bentkowski_et_al_2015_GBE
+   **As_in_Bentkowski_et_al_2015_GBE**
 
  Tech used:
 -------------------
 
 For writing this project I have used:
-- NetBeans for coding, https://netbeans.org/
-- Doxygen and Doxywizard for generating documentation:
-    http://www.stack.nl/~dimitri/doxygen/
+  - NetBeans for coding, https://netbeans.org/
+  - Doxygen and Doxywizard for generating documentation:
+      http://www.stack.nl/~dimitri/doxygen/
 
 Compilation:
 ----------
@@ -45,16 +45,15 @@ are generated automatically by Doxygen. File 'Doxyfile' contains the set-up for
 Doxygen (you mignt need to tweek some dir paths at your local workstation -
 Doxywizard is a GUI front-end to Doxygen one might find useful).
 
-
 Auxiliary code:
 -----------
 
 Directory '01_PyScrips' contains Python scripts used for plotting and analysis
 of the output files. They are rather poorly documented - sorry :-(
-SigleRuns - scripts for processing single simulation.
-MultiRuns - scripts for processing and comparing a larger number of simulations,
+  - SigleRuns - scripts for processing single simulation.
+  - MultiRuns - scripts for processing and comparing a larger number of simulations,
 often varying in parameter set-up between each other.
-GenotypeAnalysys - scripts for counting mutations and evolution related stuff.
+  - GenotypeAnalysys - scripts for counting mutations and evolution related stuff.
 
 Acknowledgements:
 --------------

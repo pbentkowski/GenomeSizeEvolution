@@ -18,7 +18,7 @@ ORIGINAL code from the publication check this branch:
 
    **As_in_Bentkowski_et_al_2015_GBE**
 
- Tech used:
+ Software used:
 -------------------
 
 For writing this project I have used:
@@ -51,7 +51,7 @@ Auxiliary code:
 
 Directory '01_PyScrips' contains Python scripts used for plotting and analysis
 of the output files. They are rather poorly documented - sorry :-(
-  
+
 * SigleRuns - scripts for processing single simulation.
 * MultiRuns - scripts for processing and comparing a larger number of simulations,
 often varying in parameter set-up between each other.

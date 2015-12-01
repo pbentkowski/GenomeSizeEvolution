@@ -46,6 +46,11 @@ are generated automatically by Doxygen. File 'Doxyfile' contains the set-up for
 Doxygen (you mignt need to tweek some dir paths at your local workstation -
 Doxywizard is a GUI front-end to Doxygen one might find useful).
 
+Fairly accurate description what the model does can be found in the documentation
+(directory 'Doc') or in Chapter 2 " Construction of the model and testing the
+parameter space" of Piotr Bentkowski's PhD thesis:
+https://ueaeprints.uea.ac.uk/50553/
+
 Auxiliary code:
 -----------
 

@@ -6,7 +6,7 @@ Scientific motivation:
 
 This is an implementation of a model presented in the paper:
 
-Bentkowski P, Oosterhout CV, Mock T (2015) *A model of genome size
+Bentkowski P, Van Oosterhout C, Mock T (2015) *A model of genome size
 evolution for prokaryotes in stable and fluctuating environments*.
 Genome Biol Evol evv148. doi: 10.1093/gbe/evv148
 

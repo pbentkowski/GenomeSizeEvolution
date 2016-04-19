@@ -1,6 +1,7 @@
 var classEcosystem =
 [
     [ "Ecosystem", "classEcosystem.html#aad52d5b02f1e2f0ffd16c72825dee140", null ],
+    [ "averageGenomeShape", "classEcosystem.html#a020f9e59e84dbb9b614ce71519b10270", null ],
     [ "clearMutationCounters", "classEcosystem.html#a4227871d6d47201edf4450fd35882c53", null ],
     [ "cumulativeMutationNumbers", "classEcosystem.html#aeea43b7824caa0001a8fe248c3392017", null ],
     [ "feedCells", "classEcosystem.html#a144a0594e881ad7b36b64faccf1d9b4c", null ],
@@ -26,6 +27,7 @@ var classEcosystem =
     [ "setPopulation", "classEcosystem.html#a9c459456082bdcebebeaba67b276cfd0", null ],
     [ "updateGrowthRatesOfCellsInPopulation", "classEcosystem.html#ace4318bc4766978edea2f73ebcaf98f8", null ],
     [ "writeGeneralDataToFile", "classEcosystem.html#aa26876007e770024928bd8c2748d2222", null ],
+    [ "writeGenotypesToFile", "classEcosystem.html#ad58a07f4f246d2953d348d687935f537", null ],
     [ "EnvFreeResources", "classEcosystem.html#a46e0a5d150b201ba3fe35bf5087acd07", null ],
     [ "meanGenomeSize", "classEcosystem.html#a52801d9d0de539460a718b0c50eb9e32", null ],
     [ "numberOfBirths", "classEcosystem.html#af66972dddf7dcaa1cabe14e78cb332d1", null ],

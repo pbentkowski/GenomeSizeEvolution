@@ -10,7 +10,7 @@ Author: Piotr Bentkowski - p.bentkowski@uea.ac.uk, bentkowski.piotr@gmail.com
 """
 import numpy
 
-      
+
 def digits(x):
     """ Returns amount of digits of x. """
     try:

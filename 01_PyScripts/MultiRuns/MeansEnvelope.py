@@ -26,7 +26,7 @@ age_data = genfromtxt("CellsAgeData.dat")
 try:
     important_line = int(sys.argv[1])
 except:
-    important_line = 8
+    important_line = 29
 
 
 def LoadEnvelopeMeanSize(arg, dirname, files):

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Reads a few files and calculates what is the relation between available resources
-and the gene number that the population of cells can maintain.
+Reads a few files and calculates what is the relation between available
+resources and the gene number that the population of cells can maintain.
 
 Genome Streamlining Project.
 Created on Thu Jan 20 18:20:15 2011
@@ -18,7 +18,7 @@ TickSize = 14
 #LineSize = 10
 
 data = p.genfromtxt("GeneralData.dat")
-if (data[-1,2] == 0.0):
+if (data[-1, 2] == 0.0):
     print "This ecosystem died out before the end of the simulation. Sorry :-("
     exit()
 par_0 = re.split(" ", ln.getline('ModelParams.dat', 6))
@@ -64,14 +64,16 @@ N_max = 60.0
 x = p.arange(0.0, N_max + 1.0, 1.0)
 y = gene_cost * (x + x**2 + core_genes) + const_cost
 Y_max = p.ceil(y.max() / 10.0) * 10.0
-real_mean_number_of_genes = data[:,2].mean()
-real_gene_cost = gene_cost * (real_mean_number_of_genes * \
-    (1.0 + real_mean_number_of_genes) + core_genes) + const_cost
+real_mean_number_of_genes = data[:, 2].mean()
+real_gene_cost = gene_cost * (real_mean_number_of_genes *
+                             (1.0 + real_mean_number_of_genes)
+                              + core_genes) + const_cost
 
 uptake_hist_ranges = p.arange(0.0, uptake_repr_hist * uptake_repr_bin,
-                             uptake_repr_bin)
-ASLD_hist_ranges = p.arange(0.0, ASLD_hist_ranges_size \
-                * ASLD_hist_ranges_bin_width, ASLD_hist_ranges_bin_width)
+                              uptake_repr_bin)
+ASLD_hist_ranges = p.arange(0.0, ASLD_hist_ranges_size
+                            * ASLD_hist_ranges_bin_width,
+                            ASLD_hist_ranges_bin_width)
 genome_size_bins = p.arange(1.0, gene_num_bins + 1, 1.0)
 
 #print tot_gain_at_repr.shape[0], tot_gain_at_repr.shape[1]
@@ -84,14 +86,14 @@ genome_size_means = p.zeros(tot_gain_at_repr.shape[0])
 ASLD_means = p.zeros(tot_gain_at_repr.shape[0])
 
 for i in xrange(0, tot_gain_at_repr.shape[0], 1):
-    ASLD_means[i] = p.sum(ASLD[i, :] * ASLD_hist_ranges ) / p.sum(ASLD[i, :])
+    ASLD_means[i] = p.sum(ASLD[i, :] * ASLD_hist_ranges) / p.sum(ASLD[i, :])
 #    ASLD[i, :] = ASLD[i, :] / ASLD[i, :].sum()
     tot_gain_means[i] = p.sum(tot_gain_at_repr[i, :] * uptake_hist_ranges) \
         / p.sum(tot_gain_at_repr[i, :])
     intake_means[i] = p.sum(intake_at_repr[i, :] * uptake_hist_ranges) \
         / p.sum(intake_at_repr[i, :])
     genome_size_means[i] = p.sum(genome_size[i, :] * genome_size_bins) \
-        /p.sum(genome_size[i, :])
+        / p.sum(genome_size[i, :])
 
 Summ_ASLD = p.zeros(ASLD.shape[1])
 ASLD_to_hist_mean = p.zeros(ASLD.shape[1])
@@ -106,15 +108,17 @@ for j in xrange(0, ASLD.shape[1], 1):
 #ASLD_to_hist_mean = ASLD_to_hist_mean / Summ_ASLD
 #ASLD_to_hist_std = ASLD_to_hist_std / Summ_ASLD
 
-tot_gain_means = tot_gain_means[~p.isnan(tot_gain_means).any(0)]
-intake_means = intake_means[~p.isnan(intake_means).any(0)]
-genome_size_means =  genome_size_means[~p.isnan(genome_size_means).any(0)]
+tot_gain_means = tot_gain_means[~p.isnan(tot_gain_means)]
+intake_means = intake_means[~p.isnan(intake_means)]
+genome_size_means = genome_size_means[~p.isnan(genome_size_means)]
 
 repr_mean_number_of_genes = genome_size_means.mean()
-real_gene_cost = gene_cost * (repr_mean_number_of_genes \
-    + repr_mean_number_of_genes**2 + core_genes) + const_cost
+real_gene_cost = gene_cost * (repr_mean_number_of_genes
+                              + repr_mean_number_of_genes**2
+                              + core_genes) + const_cost
 
 MEAN_tot_gain = tot_gain_means.mean()
+SD_tot_gain = tot_gain_means.std()
 MEAN_itake = intake_means.mean()
 The_diff = tot_gain_means - intake_means
 MEAN_diff = The_diff.mean()
@@ -123,52 +127,55 @@ ASLD_tot_mean = ASLD_means.mean()
 
 print "ASLD = the age since the last division"
 print "-----------------------------------------------------------"
-print "The mean cells total gain            :", MEAN_tot_gain
+print "The mean cells total gain            :", MEAN_tot_gain,
+print "+/-", SD_tot_gain
 print "The mean cells net uptake            :", MEAN_itake
 print "The difference of gain - uptake      :", MEAN_diff
 print "The real cost of living of repr cells:", real_gene_cost
 print "-----------------------------------------------------------"
 print "The mean ASLD          :", ASLD_tot_mean
-print "Minimal permitted ASLD :", p.floor((reproduction_size * 0.5) \
-/ max_uptake_value)
+print "Minimal permitted ASLD :", p.floor((reproduction_size * 0.5)
+                                          / max_uptake_value)
 print "Life expectancy        :", 1.0 / (data[:, 11] / data[:, 4]).mean()
 print "-----------------------------------------------------------"
 print "Maximal permitted net uptake"
-print "  with this mean number of genes: ", max_uptake_value \
-- real_gene_cost
+print "  with this mean number of genes: ", max_uptake_value - real_gene_cost
 print "-----------------------------------------------------------"
 print "Cheking (mean ASLD) x (net uptake):", ASLD_tot_mean * MEAN_itake
 
 ## plotting the results
-p.figure(1, figsize=(1000,600))
+p.figure(1, figsize=(10, 6))
 LineWidth = 4.5
-p.title('Turbulence level = %(turb)1.3f ; Death rate = %(death)1.3f'% \
-        {"turb":tubulence, "death":death_rate})
+p.title('Turbulence level = %(turb)1.3f ; Death rate = %(death)1.3f' %
+        {"turb": tubulence, "death": death_rate})
 p.bar(ASLD_hist_ranges, ASLD_to_hist_mean + ASLD_to_hist_std,
-      width=ASLD_hist_ranges_bin_width, color=(0.75,0.75,0.75,0.75), linewidth=0)
+      width=ASLD_hist_ranges_bin_width, color=(0.75, 0.75, 0.75, 0.75),
+      linewidth=0)
 p.bar(ASLD_hist_ranges, ASLD_to_hist_mean, width=ASLD_hist_ranges_bin_width,
       color='k', linewidth=0)
-p.axis([0, ASLD_hist_ranges.max(), 0, (ASLD_to_hist_mean+ASLD_to_hist_std).max()])
-p.xlabel('Time passed between reproductions (steps)', fontsize = FontSize)
+p.axis([0, ASLD_hist_ranges.max(), 0,
+        (ASLD_to_hist_mean+ASLD_to_hist_std).max()])
+p.xlabel('Time passed between reproductions (steps)', fontsize=FontSize)
 #p.ylabel('Frequency of occurrence', fontsize = FontSize)
-p.ylabel('Number of cells', fontsize = FontSize)
+p.ylabel('Number of cells', fontsize=FontSize)
 p.xticks(size=TickSize)
 p.yticks(size=TickSize)
 p.grid(True)
 
-p.figure(2, figsize=(1000,600))
-p.title('Turbulence level = %(turb)1.3f ; Death rate = %(death)1.3f'% \
-        {"turb":tubulence, "death":death_rate})
+p.figure(2, figsize=(10, 6))
+p.title('Turbulence level = %(turb)1.3f ; Death rate = %(death)1.3f' %
+        {"turb": tubulence, "death": death_rate})
 p.plot(x, y, 'ko-', markersize=4)
-p.title('Gene number of cells reproducting (red vertical) and all cells (blue vertical)')
+p.title('Gene number of cells reproducting (red vertical) and all cells' +
+        ' (blue vertical)')
 p.hlines(MEAN_diff, 0.0, N_max, 'g', linestyles='dashed', lw=2)
 #p.hlines(real_gene_cost, 0.0, N_max, 'k', linestyles='solid')
-p.vlines(repr_mean_number_of_genes, 0.0, Y_max , 'r', linestyles='dashed', lw=2)
-p.vlines(real_mean_number_of_genes, 0.0, Y_max , 'b', linestyles='dashed', lw=2)
+p.vlines(repr_mean_number_of_genes, 0.0, Y_max, 'r', linestyles='dashed', lw=2)
+p.vlines(real_mean_number_of_genes, 0.0, Y_max, 'b', linestyles='dashed', lw=2)
 #p.axis([0.0, N_max, 0.0, Y_max])
 p.axis([0.0, 50.0001, 0.0, 8.0001])
-p.xlabel('Number of metabolic genes', fontsize = FontSize)
-p.ylabel('Resources', fontsize = FontSize)
+p.xlabel('Number of metabolic genes', fontsize=FontSize)
+p.ylabel('Resources', fontsize=FontSize)
 p.xticks(size=TickSize)
 p.yticks(size=TickSize)
 p.grid(True)

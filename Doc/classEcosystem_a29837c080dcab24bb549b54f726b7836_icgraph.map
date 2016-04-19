@@ -1,4 +1,4 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classEcosystem.html#aa26876007e770024928bd8c2748d2222" title="Data collecting method. Saving general system&#39;s properties to the file." alt="" coords="317,5,560,35"/>
-<area shape="rect" id="node5" href="$TheModel_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function." alt="" coords="609,5,660,35"/>
+<map id="Ecosystem::returnGenesShannonIndex" name="Ecosystem::returnGenesShannonIndex">
+<area shape="rect" id="node2" href="$classEcosystem.html#aa26876007e770024928bd8c2748d2222" title="Data collecting method. Saving general system&#39;s properties to the file. " alt="" coords="269,5,461,46"/>
+<area shape="rect" id="node3" href="$TheModel_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function. " alt="" coords="509,12,560,39"/>
 </map>

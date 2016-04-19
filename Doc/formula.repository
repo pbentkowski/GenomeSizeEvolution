@@ -1,2 +1,3 @@
 \form#0:$ u(x,c,\sigma,A) = A \exp( \frac{-(x-c)^2}{2\sigma^2} )$
 \form#1:$x$
+\form#2:$U_{i}(x)$

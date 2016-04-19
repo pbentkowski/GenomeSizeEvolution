@@ -1,7 +1,7 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classrngEngine.html#aee64f40e07926185f95052cdc7bf18e3" title="Core method. Gets instance of the RNG." alt="" coords="177,5,340,35"/>
-<area shape="rect" id="node7" href="$classrngEngine.html#a7a954bb07d2a3e8f20b04f14d5f1a59b" title="Generates a random double precision number." alt="" coords="161,58,356,89"/>
-<area shape="rect" id="node5" href="$classrngEngine.html#aba770bb62302fb289d272c996163135f" title="Core method. Constructor of the RNG." alt="" coords="405,5,560,35"/>
-<area shape="rect" id="node9" href="$classrngEngine.html#a1b269e4352e5eae019647eadd4088bac" title="Marsenne Twister random number generator&#39;s guts." alt="" coords="408,58,557,89"/>
-<area shape="rect" id="node11" href="$classrngEngine.html#a21840f29a1ea114ddd251553e339f168" title="Seeding the Marsenne Twister random number generator." alt="" coords="609,58,759,89"/>
+<map id="Gene::mutate" name="Gene::mutate">
+<area shape="rect" id="node2" href="$classrngEngine.html#aee64f40e07926185f95052cdc7bf18e3" title="Core method. Gets instance of the RNG. " alt="" coords="166,5,319,32"/>
+<area shape="rect" id="node4" href="$classrngEngine.html#a7a954bb07d2a3e8f20b04f14d5f1a59b" title="Generates a random double precision number. " alt="" coords="153,56,333,83"/>
+<area shape="rect" id="node3" href="$classrngEngine.html#aba770bb62302fb289d272c996163135f" title="Core method. Constructor of the RNG. " alt="" coords="382,5,525,32"/>
+<area shape="rect" id="node5" href="$classrngEngine.html#a1b269e4352e5eae019647eadd4088bac" title="Marsenne Twister random number generator&#39;s guts. " alt="" coords="383,56,523,83"/>
+<area shape="rect" id="node6" href="$classrngEngine.html#a21840f29a1ea114ddd251553e339f168" title="Seeding the Marsenne Twister random number generator. " alt="" coords="574,56,714,83"/>
 </map>

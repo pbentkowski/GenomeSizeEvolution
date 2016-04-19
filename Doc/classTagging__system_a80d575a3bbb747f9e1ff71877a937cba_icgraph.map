@@ -1,6 +1,6 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classCell.html#a3b8c338f6fd2f7bd583319673d21a93e" title="Core method. Sets a brand new cell with initial (random) values." alt="" coords="300,5,460,35"/>
-<area shape="rect" id="node5" href="$classCell.html#a2ced842da88790f6e1a53a2cc2660cb9" title="Core method. Does mutations do cell&#39;s genotype." alt="" coords="321,58,439,89"/>
-<area shape="rect" id="node7" href="$classEcosystem.html#a4dccae9a322022d09724501419df349f" title="Core method. Does the horizontal gene transfer." alt="" coords="260,111,500,142"/>
-<area shape="rect" id="node9" href="$TheModel_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function." alt="" coords="551,138,601,169"/>
+<map id="Tagging_system::getInstance" name="Tagging_system::getInstance">
+<area shape="rect" id="node2" href="$classCell.html#a3b8c338f6fd2f7bd583319673d21a93e" title="Core method. Sets a brand new cell with initial (random) values. " alt="" coords="259,5,410,32"/>
+<area shape="rect" id="node3" href="$classCell.html#a2ced842da88790f6e1a53a2cc2660cb9" title="Core method. Does mutations do cell&#39;s genotype. " alt="" coords="279,56,391,83"/>
+<area shape="rect" id="node4" href="$classEcosystem.html#a4dccae9a322022d09724501419df349f" title="Core method. Does the horizontal gene transfer. " alt="" coords="245,107,424,149"/>
+<area shape="rect" id="node5" href="$TheModel_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function. " alt="" coords="472,144,523,171"/>
 </map>

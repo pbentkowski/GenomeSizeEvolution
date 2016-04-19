@@ -1,4 +1,4 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classEcosystem.html#aa26876007e770024928bd8c2748d2222" title="Data collecting method. Saving general system&#39;s properties to the file." alt="" coords="336,5,579,35"/>
-<area shape="rect" id="node5" href="$TheModel_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function." alt="" coords="628,5,679,35"/>
+<map id="Ecosystem::returnsSummOfCellResources" name="Ecosystem::returnsSummOfCellResources">
+<area shape="rect" id="node2" href="$classEcosystem.html#aa26876007e770024928bd8c2748d2222" title="Data collecting method. Saving general system&#39;s properties to the file. " alt="" coords="237,5,429,46"/>
+<area shape="rect" id="node3" href="$TheModel_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function. " alt="" coords="477,12,528,39"/>
 </map>

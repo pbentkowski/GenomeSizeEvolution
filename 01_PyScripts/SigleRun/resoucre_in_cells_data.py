@@ -72,7 +72,7 @@ STD_uptake[0] = 0.0
 
 X_max = p.ceil((means_uptake + STD_uptake).max() * 100.0) / 100.0
 Y_max = p.ceil((means_in + STD_in).max() * 100.0) / 100.0
-p.figure(1, figsize=(20, 7), dpi=80)
+p.figure(1, figsize=(20, 14), dpi=80)
 p.subplot(221)
 p.bar(ranges, means_in + STD_in, width = hist_bin_size,
          color=(0.75, 0.75, 0.75, 0.75), linewidth=0)
@@ -114,7 +114,7 @@ print ' Total fraction of collected resources (just cheking):', means_in.sum()
 print 'Fraction of hungry cells:', hungry_ones, '+/-', STD_of_hungry
 
 
-p.figure(2, figsize=(1000, 600))
+p.figure(2, figsize=(10, 6))
 p.bar(ranges_uptake, means_uptake + STD_uptake, width = 1.0,
          color=(0.75, 0.75, 0.75, 0.75), linewidth=0)
 p.bar(ranges_uptake, means_uptake, width = 1.0, color='k', linewidth=0)

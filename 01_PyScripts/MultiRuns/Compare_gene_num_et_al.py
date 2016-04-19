@@ -18,7 +18,7 @@ AxisLabelFontSize = 22
 AxisTickFontSize = 22
 AnnotateFontSize = 19
 
-gene_num_lim = 40
+gene_num_lim = 25
 gene_surf_lim = 0.7000001
 dec_places = '%1.4f'
 

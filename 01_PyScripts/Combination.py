@@ -10,27 +10,28 @@ Author: Piotr Bentkowski - p.bentkowski@uea.ac.uk, bentkowski.piotr@gmail.com
 
 import numpy
 
+
 def combinat(n, k):
     if n <= 0:
         print "Call from Combination.combinat(n, k) : n and k have to be",\
-        "a positive intigers."
+            "a positive intigers."
         return numpy.NaN
     elif k <= 0:
         print "Call from Combination.combinat(n, k) : n and k have to be",\
-        "a positive intigers."
+            "a positive intigers."
         return numpy.NaN
     elif n < k:
         print "Call from Combination.combinat(n, k) : n cannont be smaller",\
-        "then k."
+            "then k."
         return numpy.NaN
     elif (n % 1) != 0:
         print "Call from Combination.combinat(n, k) : n and k have to be",\
-        "a positive intigers."
+            "a positive intigers."
         return numpy.NaN
     elif (k % 1) != 0:
         print "Call from Combination.combinat(n, k) : n and k have to be",\
-        "a positive intigers."
+            "a positive intigers."
         return numpy.NaN
     else:
-        return numpy.math.factorial(n) / (numpy.math.factorial(k) \
-        * numpy.math.factorial(n-k))
+        return numpy.math.factorial(n) / (numpy.math.factorial(k)
+                                          * numpy.math.factorial(n-k))

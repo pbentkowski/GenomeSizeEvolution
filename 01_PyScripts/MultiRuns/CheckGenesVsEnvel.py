@@ -26,23 +26,28 @@ def LoadMyGene(arg, dirname, files):
             arg.append((genes[:, 0], genes[:, 1]))
 
 
-EnvelData = []
-os.path.walk(os.getcwd(), LoadMyEnvel, EnvelData)
+def main():
+    """ """
+    EnvelData = []
+    os.path.walk(os.getcwd(), LoadMyEnvel, EnvelData)
 
-GeneData = []
-os.path.walk(os.getcwd(), LoadMyGene, GeneData)
+    GeneData = []
+    os.path.walk(os.getcwd(), LoadMyGene, GeneData)
 
-p.figure(11, figsize=(12, 6))
-for j in xrange(len(EnvelData)):
-    for i in xrange(len(EnvelData[j][0])):
-        ax = p.errorbar(GeneData[j][0][i], EnvelData[j][0][i],
-                        xerr=GeneData[j][1][i], yerr=EnvelData[j][1][i],
-                        fmt='o', ecolor='k')
-p.xlabel('number of genes', fontsize=17)
-p.ylabel('surface of genotype\'s envelope to env. ratio', fontsize=17)
-p.xticks(size=16)
-p.yticks(size=16)
-p.grid()
-p.show()
+    p.figure(11, figsize=(12, 6))
+    for j in xrange(len(EnvelData)):
+        for i in xrange(len(EnvelData[j][0])):
+            ax = p.errorbar(GeneData[j][0][i], EnvelData[j][0][i],
+                            xerr=GeneData[j][1][i], yerr=EnvelData[j][1][i],
+                            fmt='o', ecolor='k')
+    p.xlabel('number of genes', fontsize=17)
+    p.ylabel('surface of genotype\'s envelope to env. ratio', fontsize=17)
+    p.xticks(size=16)
+    p.yticks(size=16)
+    p.grid()
+    p.show()
 
-print 'done'
+    print 'done'
+
+if __name__ == "__main__":
+    main()

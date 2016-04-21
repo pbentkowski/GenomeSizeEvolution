@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Takes files RecourceInCells.dat and RecourceUptakenCells.dat and show histograms
-of average uptake values and distribution of resource allocation among the cell
-for the stable second half of the model iteration.
+Takes files RecourceInCells.dat and RecourceUptakenCells.dat and show
+histograms of average uptake values and distribution of resource allocation
+among the cell for the stable second half of the model iteration.
 
 Author: Piotr Bentkowski - p.bentkowski@uea.ac.uk, bentkowski.piotr@gmail.com
 """
@@ -52,18 +52,18 @@ ranges_uptake = p.arange(0.0, uptake_res_data.shape[1], 1.0)
 summ = p.zeros((uptake_res_data.shape[0]))
 
 for j in xrange(inside_res_data.shape[0]):
-    inside_res_data[j,:] = inside_res_data[j,:] / inside_res_data[j,:].sum()
+    inside_res_data[j, :] = inside_res_data[j, :] / inside_res_data[j, :].sum()
 
 for i in xrange(inside_res_data.shape[1]):
-    means_in[i] = inside_res_data[:,i].mean()
-    STD_in[i] = inside_res_data[:,i].std()
+    means_in[i] = inside_res_data[:, i].mean()
+    STD_in[i] = inside_res_data[:, i].std()
 
 for k in xrange(uptake_res_data.shape[0]):
-    uptake_res_data[k,:] = uptake_res_data[k,:] / uptake_res_data[k,:].sum()
+    uptake_res_data[k, :] = uptake_res_data[k, :] / uptake_res_data[k, :].sum()
 
 for l in xrange(uptake_res_data.shape[1]):
-    means_uptake[l] = uptake_res_data[:,l].mean()
-    STD_uptake[l] = uptake_res_data[:,l].std()
+    means_uptake[l] = uptake_res_data[:, l].mean()
+    STD_uptake[l] = uptake_res_data[:, l].std()
 
 hungry_ones = means_uptake[0]
 STD_of_hungry = STD_uptake[0]
@@ -74,9 +74,9 @@ X_max = p.ceil((means_uptake + STD_uptake).max() * 100.0) / 100.0
 Y_max = p.ceil((means_in + STD_in).max() * 100.0) / 100.0
 p.figure(1, figsize=(20, 14), dpi=80)
 p.subplot(221)
-p.bar(ranges, means_in + STD_in, width = hist_bin_size,
-         color=(0.75, 0.75, 0.75, 0.75), linewidth=0)
-p.bar(ranges, means_in, width = hist_bin_size, color='k', linewidth=0)
+p.bar(ranges, means_in + STD_in, width=hist_bin_size,
+      color=(0.75, 0.75, 0.75, 0.75), linewidth=0)
+p.bar(ranges, means_in, width=hist_bin_size, color='k', linewidth=0)
 p.vlines(death_value, 0.0, Y_max, 'k', linestyles='dashed')
 p.vlines(reprod_value, 0.0, Y_max, 'k', linestyles='dashed')
 #p.fill_between(ranges, means_in + STD_in, means_in - STD_in,
@@ -87,15 +87,15 @@ p.ylabel('frequency of occurrence', fontsize=LabelsFontSize)
 p.xticks(size=AxisTickFontSize)
 p.yticks(size=AxisTickFontSize)
 p.grid(True)
-p.title(r'$\delta = %(death)1.3f$   $T= %(turb)1.2f$'%{"death":death_rate,
-        "turb":tubulence}, fontsize=LabelsFontSize)
+p.title(r'$\delta = %(death)1.3f$   $T= %(turb)1.2f$' % {"death": death_rate,
+        "turb": tubulence}, fontsize=LabelsFontSize)
 
 #p.figure(2, figsize=(1000, 600))
 p.subplot(223)
 #p.get_current_fig_manager().window.wm_geometry("1000x600+10+10")
-p.bar(ranges_uptake, means_uptake + STD_uptake, width = 1.0,
-         color=(0.75, 0.75, 0.75, 0.75), linewidth=0)
-p.bar(ranges_uptake, means_uptake, width = 1.0, color='k', linewidth=0)
+p.bar(ranges_uptake, means_uptake + STD_uptake, width=1.0,
+      color=(0.75, 0.75, 0.75, 0.75), linewidth=0)
+p.bar(ranges_uptake, means_uptake, width=1.0, color='k', linewidth=0)
 p.vlines(max_intake_value, 0.0, X_max, 'k', linestyles='dashed')
 #p.fill_between(ranges_uptake, means_uptake + STD_uptake,
 #                means_uptake - STD_uptake, color=(0.75, 0.75, 0.75, 0.75))
@@ -115,9 +115,9 @@ print 'Fraction of hungry cells:', hungry_ones, '+/-', STD_of_hungry
 
 
 p.figure(2, figsize=(10, 6))
-p.bar(ranges_uptake, means_uptake + STD_uptake, width = 1.0,
-         color=(0.75, 0.75, 0.75, 0.75), linewidth=0)
-p.bar(ranges_uptake, means_uptake, width = 1.0, color='k', linewidth=0)
+p.bar(ranges_uptake, means_uptake + STD_uptake, width=1.0,
+      color=(0.75, 0.75, 0.75, 0.75), linewidth=0)
+p.bar(ranges_uptake, means_uptake, width=1.0, color='k', linewidth=0)
 p.vlines(max_intake_value, 0.0, X_max, 'k', linestyles='dashed')
 #p.fill_between(ranges_uptake, means_uptake + STD_uptake,
 #                means_uptake - STD_uptake, color=(0.75, 0.75, 0.75, 0.75))
@@ -127,6 +127,6 @@ p.ylabel('frequency of occurrence', fontsize=F2_LabelsFontSize)
 p.xticks(size=F2_AxisTickFontSize)
 p.yticks(size=F2_AxisTickFontSize)
 p.grid(True)
-p.title(r'$T= %(turb)1.2f$'% {"turb":tubulence}, fontsize=F2_LabelsFontSize)
+p.title(r'$T= %(turb)1.2f$' % {"turb": tubulence}, fontsize=F2_LabelsFontSize)
 
 p.show()

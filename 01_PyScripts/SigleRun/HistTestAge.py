@@ -13,9 +13,9 @@ import pylab as p
 import re
 import linecache as ln
 
-LabelFontSize = 22
-TickSize = 18
-titleSize = 22
+LabelFontSize = 26
+TickSize = 22
+titleSize = 26
 
 par_0 = re.split(" ", ln.getline('ModelParams.dat', 29))
 death_rate = float(par_0[6])
@@ -39,18 +39,19 @@ exp_distr = 10.0 * death_rate * p.exp(-death_rate * age)
 # why the hell I need to multiply by 10 !? YES! 10 is the width of the
 # histrogram bin!
 
-MaxAge = age.max() - 100
+maxAge = age.max() - 100
+annot = "C"
 
-p.figure(14, figsize=(12, 7))
-#p.get_current_fig_manager().window.wm_geometry("1000x600+10+10")
+p.figure(14, figsize=(12, 8))
 p.bar(age, means, width=10.0, color='k', linewidth=0)
 p.fill_between(age, means + STD, means - STD, color=(0.75, 0.75, 0.75, 0.75))
 p.plot(age, exp_distr, 'w--', linewidth=3)
-p.axis([0, MaxAge, 0, 0.1])
-#p.axis([0, age.max(), 0, (means + STD).max()])
+p.axis([0, maxAge, 0, 0.1])
 p.xlabel('age of cells (steps)', fontsize=LabelFontSize)
 p.ylabel('frequency of occurrence', fontsize=LabelFontSize)
 p.title('$ \delta $ = %s' % death_rate, fontsize=titleSize)
+p.text(1300, 0.09, annot, horizontalalignment='center',
+       verticalalignment='center', fontsize=35)
 p.xticks(size=TickSize)
 p.yticks(size=TickSize)
 p.grid(True)

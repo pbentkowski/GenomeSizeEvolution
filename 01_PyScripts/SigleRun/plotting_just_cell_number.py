@@ -39,10 +39,10 @@ p.figure(1, figsize=(10, 6))
 #p.grid(True)
 
 p.subplot(313)
-p.plot(data[:, 0],data[:, 4],'k-')
-p.annotate('$h_{c} = %1.4f$'%(The_big_value,), xy = (XX, YY),  xycoords='data',
+p.plot(data[:, 0], data[:, 4], 'k-')
+p.annotate('$h_{c} = %1.4f$' % (The_big_value,), xy=(XX, YY), xycoords='data',
            fontsize=AnnotateFontSize)
-p.axis([0, data[:,0].max(), 0, data[:,4].max()])
+p.axis([0, data[:, 0].max(), 0, data[:, 4].max()])
 p.xlabel('time (steps)', fontsize=X_Label)
 p.ylabel('number of cells', fontsize=X_Label)
 p.xticks(size=X_ticks)

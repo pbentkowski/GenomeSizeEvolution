@@ -11,6 +11,7 @@ Author: Piotr Bentkowski - p.bentkowski@uea.ac.uk, bentkowski.piotr@gmail.com
 
 import pylab as p
 import re
+import sys
 import linecache as ln
 
 FontSize = 22
@@ -20,7 +21,7 @@ TickSize = 20
 data = p.genfromtxt("GeneralData.dat")
 if (data[-1, 2] == 0.0):
     print "This ecosystem died out before the end of the simulation. Sorry :-("
-    exit()
+    sys.exit()
 par_0 = re.split(" ", ln.getline('ModelParams.dat', 6))
 tubulence = float(par_0[6])
 par_0 = re.split(" ", ln.getline('ModelParams.dat', 21))
@@ -68,12 +69,14 @@ Y_max = p.ceil(y.max() / 10.0) * Res_max
 real_mean_number_of_genes = data[:, 2].mean()
 real_std_number_of_genes = data[:, 2].std()
 real_gene_cost = gene_cost * (real_mean_number_of_genes *
-                (1.0 + real_mean_number_of_genes) + core_genes) + const_cost
+                             (1.0 + real_mean_number_of_genes)
+                              + core_genes) + const_cost
 
 uptake_hist_ranges = p.arange(0.0, uptake_repr_hist * uptake_repr_bin,
                               uptake_repr_bin)
 ASLD_hist_ranges = p.arange(0.0, ASLD_hist_ranges_size
-                  * ASLD_hist_ranges_bin_width, ASLD_hist_ranges_bin_width)
+                            * ASLD_hist_ranges_bin_width,
+                            ASLD_hist_ranges_bin_width)
 genome_size_bins = p.arange(1.0, gene_num_bins + 1, 1.0)
 
 #print tot_gain_at_repr.shape[0], tot_gain_at_repr.shape[1]
@@ -96,8 +99,8 @@ for i in xrange(0, tot_gain_at_repr.shape[0], 1):
     genome_size_means[i] = p.sum(genome_size[i, :] * genome_size_bins) \
         / p.sum(genome_size[i, :])
     for j in xrange(0, genome_size[i, :].shape[0], 1):
-                    genome_size_std[i] += genome_size[i, j] * (genome_size_bins[j]
-                    - genome_size_means[i])**2
+                    genome_size_std[i] += genome_size[i, j] \
+                        * (genome_size_bins[j] - genome_size_means[i])**2
     genome_size_std[i] = p.sqrt(genome_size_std[i] / p.sum(genome_size[i, :]))
 
 Summ_ASLD = p.zeros(ASLD.shape[1])
@@ -120,8 +123,8 @@ genome_size_means = genome_size_means[~p.isnan(genome_size_means).any(0)]
 repr_mean_number_of_genes = genome_size_means.mean()
 repr_std_number_of_genes = genome_size_std.mean()
 real_gene_cost = gene_cost * (repr_mean_number_of_genes
-                + repr_mean_number_of_genes**2 + core_genes) + const_cost
-
+                              + repr_mean_number_of_genes**2
+                              + core_genes) + const_cost
 MEAN_tot_gain = tot_gain_means.mean()
 MEAN_itake = intake_means.mean()
 The_diff = tot_gain_means - intake_means

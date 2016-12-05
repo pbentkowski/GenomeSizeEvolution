@@ -8,10 +8,8 @@ This is an implementation of a model presented in the paper:
 
 Bentkowski P, Van Oosterhout C, Mock T (2015) *A model of genome size
 evolution for prokaryotes in stable and fluctuating environments*.
-Genome Biol Evol evv148. doi: 10.1093/gbe/evv148
-
-You can get it from here (it's Open Access):
-  http://gbe.oxfordjournals.org/content/7/8/2344
+Genome Biol Evol evv148. http://dx.doi.org/10.1093/gbe/evv148 
+(it's Open Access)
 
 The "Master" branch includes the newest stable development. For the
 ORIGINAL code from the publication check this branch:

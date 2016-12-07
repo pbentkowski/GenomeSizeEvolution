@@ -4,12 +4,16 @@ Welcome to Genome Size Evolution project!
 Scientific motivation:
 -------------------
 
-This is an implementation of a model presented in the paper:
+This is an implementation of a model presented in the papers:
 
 Bentkowski P, Van Oosterhout C, Mock T (2015) *A model of genome size
 evolution for prokaryotes in stable and fluctuating environments*.
 Genome Biol Evol evv148. http://dx.doi.org/10.1093/gbe/evv148 
 (it's Open Access)
+
+Bentkowski P, van Oosterhout C, Ashby B, Mock T. (2016). *The effect 
+of extrinsic mortality on genome size evolution in prokaryotes*. 
+ISME Journal, Epub ahead of print. https://dx.doi.org/10.1038/ismej.2016.165
 
 The "Master" branch includes the newest stable development. For the
 ORIGINAL code from the publication check this branch:
